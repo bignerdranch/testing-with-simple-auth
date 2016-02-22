@@ -27,7 +27,7 @@ describe('Acceptance: Login', function() {
     click('button.submit');
 
     andThen(function() {
-      expect(currentPath()).to.equal('login');
+      expect(currentPath()).to.equal('private-testing');
     });
   });
 });

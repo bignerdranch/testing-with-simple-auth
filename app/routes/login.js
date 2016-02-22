@@ -1,9 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  model () {
+    return this.store.createRecord('authentication');
+  },
+
   actions: {
-    authenticate: () => {
-      console.log('auth');
+    authenticate (model) {
+      model.save();
     }
   }
 });
